@@ -62,10 +62,11 @@ def recall():
     # Solicitante tem algo a receber?
     assert self.users[msg.sender] > 0  
     
-    # Atualizando o hashmap
-    self.users[msg.sender] = 0
+
     # Cumprindo os requisitos; ocorre o extorno
     send(msg.sender, self.users[msg.sender])
+    # Atualizando o hashmap
+    self.users[msg.sender] = 0
     
 
 
